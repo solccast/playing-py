@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "web"
+version = "0.1.0"
+description = ""
+authors = ["Sol Angela Chilaca Castro <solaccastro@gmail.com>"]
+readme = "README.md"
+packages = [{include = "web", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.12.3"
+flask = "^3.0.3"
+python-dotenv = "^1.0.1"
+psycopg2-binary = "^2.9.9"
+flask-sqlalchemy = "^3.1.1"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+flask-shell-ipython = "^0.5.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
