@@ -1,10 +1,13 @@
 from flask import Flask, render_template
+from flask_session import Session
 from src.web.config import config
 from src.web.controllers.users import bp as blueprint_users
 from src.web.controllers.auth import bp as blueprint_auth
 from src.web.helpers import handler
 from src.core import database
 from src.core import seed
+
+session = Session()
 
 def create_app(env="development", static_folder="../../static"):
     app = Flask(__name__, static_folder=static_folder)
@@ -14,6 +17,7 @@ def create_app(env="development", static_folder="../../static"):
     app.register_blueprint(blueprint_auth)
     database.init_app(app)
 
+    session.init_app(app)
 
     # Error handler
     app.register_error_handler(404, handler.not_found_error)

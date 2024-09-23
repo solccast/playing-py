@@ -7,7 +7,7 @@ class Config(object):
     
     SECRET_KEY = "secret"
     TESTING = False
-    SESSION_TYPE = "filesystem"
+    SESSION_TYPE = "filesystem" #Esto es lo que indica el backend que usará para guardar la sesión
     
     
 class ProductionConfig(Config):
