@@ -20,7 +20,7 @@ def authenticate():
     """
     params = request.form #se obtenemos los parametros en cada request
     
-    user = auth.find_user_by_email_and_password(params["email"], params["password"])
+    user = auth.check_user(params["email"], params["password"])
 
     if not user:
         flash("Usuario o contraseña incorrecta", "error")
