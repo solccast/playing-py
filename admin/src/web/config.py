@@ -13,7 +13,7 @@ class Config(object):
 class ProductionConfig(Config):
     """Production configuration."""
     #SQLALCHEMY_DATABASE_URI = None
-    #cONTInuar con el resto de variables 
+    #Acá hay que hacer lo mismo que con development config pero tomando el nombre de las variables de vault
     pass
 
 

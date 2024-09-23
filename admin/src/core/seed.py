@@ -9,7 +9,8 @@ def run():
     test_user = auth.create_user(
         id=4,
         name="Giovanni",
-        email="giovanni.giorgio@gmail.com"
+        email="giovanni.giorgio@gmail.com",
+        password="123456"
     )
 
     test_cat = cats.create_cat(
